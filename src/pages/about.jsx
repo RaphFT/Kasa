@@ -1,5 +1,10 @@
 import React from 'react'
 
 export const About = () => {
-  return <main>À propos</main>
+  return (
+    <section className="about">
+      <h1>À propos</h1>
+      {/* Contenu à venir */}
+    </section>
+  )
 } 

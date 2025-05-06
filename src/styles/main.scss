@@ -3,13 +3,51 @@
 @use './card.scss';
 @use './footer.scss';
 
-.layout-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
   background: #fff;
-  padding-top: 27px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 389px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.layout-body {
+  flex: 1;
+  width: 100%;
+  padding: 27px;
   display: flex;
   flex-direction: column;
   gap: 27px;
-  min-height: 100vh;
-  margin-left: 27px;
-  margin-right: 27px;
+}
+
+// Page d'accueil
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+@media (max-width: 389px) {
+  .layout-body {
+    padding: 27px 12px;
+  }
 }

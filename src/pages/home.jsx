@@ -5,13 +5,13 @@ import data from '../data.json'
 
 export const Home = () => {
   return (
-    <main>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '27px' }}>
       <Banner />
       <section className="cards-list">
         {data.map(({ id, cover, title }) => (
           <Card key={id} id={id} cover={cover} title={title} />
         ))}
       </section>
-    </main>
+    </div>
   )
 } 
