@@ -1,0 +1,15 @@
+@use './header.scss';
+@use './banner.scss';
+@use './card.scss';
+@use './footer.scss';
+
+.layout-body {
+  background: #fff;
+  padding-top: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  min-height: 100vh;
+  margin-left: 27px;
+  margin-right: 27px;
+}
