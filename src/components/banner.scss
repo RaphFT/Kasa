@@ -23,7 +23,8 @@
 
   &__title {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 24px;
+    line-height: 1;
     font-weight: 700;
     text-align: left;
     padding: 0 1rem;
@@ -40,10 +41,3 @@
     }
   }
 }
-
-// Masquer le <br> sur desktop
-@media (min-width: 768px) {
-  .banner__title br {
-    display: none;
-  }
-} 
