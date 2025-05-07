@@ -2,14 +2,26 @@ import React from 'react'
 import { Banner } from '../components/banner'
 import { Card } from '../components/card'
 import data from '../data.json'
+import homeBan from '../assets/banners/home-ban.png'
+import './home.scss'
 
 export const Home = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '27px' }}>
-      <Banner />
-      <section className="cards-list">
-        {data.map(({ id, cover, title }) => (
-          <Card key={id} id={id} cover={cover} title={title} />
+    <div className="main-container">
+      <section>
+        <Banner 
+          image={homeBan}
+          title="Chez vous, partout et ailleurs"
+        />
+      </section>
+      <section className="cards_logement">
+        {data.map((logement) => (
+          <Card
+            key={logement.id}
+            id={logement.id}
+            title={logement.title}
+            cover={logement.cover}
+          />
         ))}
       </section>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import '../styles/header.scss'
+import './header.scss'
 
 export const Header = () => {
   const location = useLocation()

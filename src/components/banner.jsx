@@ -1,13 +1,17 @@
 import React from 'react'
-import bannerImg from '../assets/banners/home-ban.png'
-import '../styles/banner.scss'
+import PropTypes from 'prop-types'
+import './banner.scss'
 
-export const Banner = () => {
+export const Banner = ({ image, title }) => {
   return (
-    <section className="banner">
-      <img src={bannerImg} alt="Bannière Kasa" className="banner__img" />
-      <div className="banner__overlay" />
-      <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
-    </section>
+    <div className="banner">
+      <img src={image} alt={title} className="banner__img" />
+      <h1 className="banner__text">{title}</h1>
+    </div>
   )
+}
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 } 

@@ -1,0 +1,21 @@
+.main-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.cards_logement {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+} 

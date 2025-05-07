@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import '../styles/card.scss'
+import './card.scss'
 
-export const Card = ({ cover, title, id }) => {
+export const Card = ({ id, title, cover }) => {
   return (
-    <article className="card" key={id}>
+    <Link to={`/logement/${id}`} className="card">
       <img src={cover} alt={title} className="card__img" />
       <h2 className="card__title">{title}</h2>
-    </article>
+    </Link>
   )
 }
 

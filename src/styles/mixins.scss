@@ -1,0 +1,69 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Media queries
+@mixin media-up($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Le breakpoint '#{$breakpoint}' n'existe pas dans $breakpoints.";
+  }
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  max-width: map.get($container, 'max-width');
+  margin: 0 auto;
+  padding: 0 map.get(map.get($container, 'padding'), 'mobile');
+
+  @include media-up('tablet') {
+    padding: 0 map.get(map.get($container, 'padding'), 'tablet');
+  }
+}
+
+// Flexbox
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Typography
+@mixin heading-1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @include media-up('tablet') {
+    font-size: 2rem;
+  }
+}
+
+@mixin heading-2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  @include media-up('tablet') {
+    font-size: 1.5rem;
+  }
+}
+
+// Transitions
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Hover effects
+@mixin hover-scale($scale: 1.05) {
+  @include transition(transform);
+  
+  &:hover {
+    transform: scale($scale);
+  }
+} 
