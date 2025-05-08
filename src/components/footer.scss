@@ -3,6 +3,7 @@
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
+  margin-top: 20px;
 
   &__logo {
     margin: 0 auto 1rem auto;
@@ -25,6 +26,18 @@
       span:first-child {
         display: inline;
       }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+      font-size: 24px;
     }
   }
 } 

@@ -8,8 +8,8 @@ export const Header = () => {
     <header className="header">
       <img src="/logo-header-desktop.svg" alt="Kasa logo" className="header__logo" />
       <nav className="header__nav">
-        <Link to="/" className={location.pathname === '/' ? 'active' : ''}>ACCUEIL</Link>
-        <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>A PROPOS</Link>
+        <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Accueil</Link>
+        <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>A Propos</Link>
       </nav>
     </header>
   )

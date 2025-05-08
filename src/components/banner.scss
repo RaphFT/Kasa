@@ -4,7 +4,7 @@
   height: 111px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-top: 10px;
 
   &__img {
     width: 100%;
@@ -45,9 +45,10 @@
     }
 
     &__title {
-      font-size: 2.5rem;
+      font-size: 48px;
       text-align: center;
       padding: 0;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
       span:first-child {
         display: inline;
@@ -58,19 +59,25 @@
   // Large Desktop (1280px)
   @media (min-width: 1280px) {
     &__title {
+      font-size: 48px;
       padding: 0;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 
   @media (min-width: 1440px) {
     &__title {
+      font-size: 48px;
       padding: 0;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 
   @media (min-width: 1920px) {
     &__title {
+      font-size: 48px;
       padding: 0;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 }
