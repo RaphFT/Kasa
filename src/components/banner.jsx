@@ -7,7 +7,10 @@ export const Banner = ({ image, title }) => {
     <div className="banner">
       <img src={image} alt={title} className="banner__img" />
       <div className="banner__overlay">
-        <h1 className="banner__title">{title}</h1>
+        <h1 className="banner__title">
+          <span>Chez vous, </span>
+          <span>partout et ailleurs</span>
+        </h1>
       </div>
     </div>
   )
