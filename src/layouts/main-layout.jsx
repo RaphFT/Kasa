@@ -1,15 +1,16 @@
 import React from 'react'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
+import './main-layout.scss'
 
 export const MainLayout = ({ children }) => {
   return (
-    <>
+    <div className="main-layout">
       <Header />
-      <div className="layout-body">
+      <main className="main-content">
         {children}
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   )
 } 

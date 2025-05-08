@@ -5,7 +5,7 @@ import './banner.scss'
 export const Banner = ({ image, title }) => {
   return (
     <div className="banner">
-      <img src={image} alt={title} className="banner__img" />
+      <img src={image} alt={title} className="banner__img" loading="eager" />
       <div className="banner__overlay">
         <h1 className="banner__title">
           <span>Chez vous, </span>
