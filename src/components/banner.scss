@@ -35,10 +35,10 @@
     }
   }
 
-  @media (min-width: 768px) {
+  // Desktop (1024px)
+  @media (min-width: 1024px) {
     height: 223px;
     border-radius: 25px;
-    margin-bottom: 2rem;
 
     &__overlay {
       justify-content: center;
@@ -47,10 +47,30 @@
     &__title {
       font-size: 2.5rem;
       text-align: center;
+      padding: 0;
 
       span:first-child {
         display: inline;
       }
+    }
+  }
+
+  // Large Desktop (1280px)
+  @media (min-width: 1280px) {
+    &__title {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__title {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    &__title {
+      padding: 0;
     }
   }
 }

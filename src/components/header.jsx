@@ -6,7 +6,7 @@ export const Header = () => {
   const location = useLocation()
   return (
     <header className="header">
-      <img src="/logo-header-mobile.png" alt="Kasa logo" className="header__logo" />
+      <img src="/logo-header-desktop.svg" alt="Kasa logo" className="header__logo" />
       <nav className="header__nav">
         <Link to="/" className={location.pathname === '/' ? 'active' : ''}>ACCUEIL</Link>
         <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>A PROPOS</Link>
