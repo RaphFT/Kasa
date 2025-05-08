@@ -2,7 +2,7 @@ import React from 'react'
 import { Banner } from '../components/banner'
 import { Card } from '../components/card'
 import data from '../data.json'
-import homeBan from '../assets/banners/home-ban.png'
+import homeBan from '../assets/banners/home-banner.webp'
 import './home.scss'
 
 export const Home = () => {

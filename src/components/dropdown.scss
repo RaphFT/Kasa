@@ -6,7 +6,7 @@
     width: 100%;
     background: #FF6060;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 500;
     border: none;
     border-radius: 10px;
@@ -38,6 +38,12 @@
 
   &--open .dropdown__icon {
     transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown__toggle {
+    font-size: 24px;
   }
 }
 

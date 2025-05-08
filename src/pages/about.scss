@@ -1,0 +1,28 @@
+.about__dropdowns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about__dropdowns .dropdown {
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (min-width: 900px) {
+  .about__dropdowns {
+    gap: 30px;
+    margin-bottom: 0;
+  }
+  .about__dropdowns .dropdown {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about__dropdowns .dropdown {
+    max-width: 1000px;
+  }
+} 
