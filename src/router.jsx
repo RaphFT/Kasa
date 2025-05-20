@@ -18,7 +18,7 @@ const router = {
     v7_startTransition: true,
     v7_relativeSplatPath: true
   },
-  basename: '/Kasa'
+  basename: import.meta.env.PROD ? '/Kasa' : '/'
 }
 
 export const AppRouter = () => (
