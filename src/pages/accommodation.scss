@@ -23,6 +23,9 @@ $font-size-lg: 1.1rem;
 $font-size-xl: 1.3rem;
 $font-size-xxl: 2rem;
 
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
 $breakpoint-desktop: 900px;
 
 // Mixins
@@ -122,15 +125,15 @@ $breakpoint-desktop: 900px;
     flex: 1;
 
     .accommodation__title {
-      font-size: $font-size-xl;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: $font-weight-medium;
       color: $color-primary;
       margin-bottom: $spacing-xs;
     }
 
     .accommodation__location {
-      font-size: $font-size-base;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: $font-weight-medium;
       color: $color-text;
       margin-bottom: $spacing-xs;
     }
@@ -219,11 +222,13 @@ $breakpoint-desktop: 900px;
 
     &__main {
       .accommodation__title {
-        font-size: $font-size-xxl;
+        font-size: 36px;
+        font-weight: $font-weight-medium;
       }
 
       .accommodation__location {
-        font-size: $font-size-lg;
+        font-size: 18px;
+        font-weight: $font-weight-medium;
       }
     }
 
