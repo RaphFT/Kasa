@@ -47,8 +47,11 @@ export const Accommodation = () => {
           <div className="accommodation__tags">
             {logement.tags.map(tag => <Tag key={tag} label={tag} />)}
           </div>
+          {/* Version mobile */}
           <div className="accommodation__row">
-            <RatingStars rating={logement.rating} />
+            <div className="accommodation__rating">
+              <RatingStars rating={logement.rating} />
+            </div>
             <div className="accommodation__host-row">
               <span className="accommodation__host-name">
                 {logement.host.name.split(' ').map((part, i) => (
@@ -61,6 +64,21 @@ export const Accommodation = () => {
               <span className="accommodation__host-picture" />
             </div>
           </div>
+        </div>
+        {/* Version desktop */}
+        <div className="accommodation__side">
+          <div className="accommodation__host-row">
+            <span className="accommodation__host-name">
+              {logement.host.name.split(' ').map((part, i) => (
+                <React.Fragment key={i}>
+                  {part}
+                  {i === 0 && <br />}
+                </React.Fragment>
+              ))}
+            </span>
+            <span className="accommodation__host-picture" />
+          </div>
+          <RatingStars rating={logement.rating} />
         </div>
       </div>
       <div className="accommodation__dropdowns">
