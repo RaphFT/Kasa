@@ -18,7 +18,7 @@ Kasa est une application web de location d'appartements entre particuliers, dév
 
 1. Clonez le repository :
 ```bash
-git clone [URL_DU_REPO]
+git clone https://github.com/RaphFT/Kasa
 ```
 
 2. Installez les dépendances :
@@ -83,7 +83,7 @@ Ce projet est sous licence MIT.
 
 ## 👥 Auteur
 
-[Votre Nom]
+Fremont Raphael
 
 # React + Vite
 
