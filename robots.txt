@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive or private directories (décommente si besoin)
+# Disallow: /private/
+
+# Sitemap
+Sitemap: https://kasa.com/sitemap.xml 
