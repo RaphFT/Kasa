@@ -15,7 +15,7 @@ export const Home = () => {
         />
       </section>
       <section className="cards_logement">
-        {data.map((logement) => (
+        {data.accommodations.map((logement) => (
           <Card
             key={logement.id}
             id={logement.id}

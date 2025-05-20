@@ -6,7 +6,7 @@ import data from '../data.json'
 import './about.scss'
 
 export const About = () => {
-  const aboutList = data[data.length - 1].aboutList
+  const { aboutList } = data
 
   return (
     <main className="main-container">
