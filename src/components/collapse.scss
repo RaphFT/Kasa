@@ -20,17 +20,10 @@
   }
 
   &__arrow {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     transition: transform 0.3s ease;
-  }
-
-  &__arrow--desktop {
-    display: none;
-  }
-
-  &__arrow--mobile {
-    display: block;
+    object-fit: contain;
   }
 
   &__content {
@@ -56,12 +49,9 @@
       font-size: 18px;
     }
 
-    &__arrow--desktop {
-      display: block;
-    }
-
-    &__arrow--mobile {
-      display: none;
+    &__arrow {
+      width: 24px;
+      height: 24px;
     }
   }
 }
