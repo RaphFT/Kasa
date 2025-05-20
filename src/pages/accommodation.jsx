@@ -1,6 +1,6 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import data from '../data.json'
+import React, { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { accommodationService } from '../services/accommodationService'
 import { Tag } from '../components/tag'
 import { RatingStars } from '../components/rating-stars'
 import { Dropdown } from '../components/dropdown'
@@ -9,8 +9,31 @@ import './accommodation.scss'
 
 export const Accommodation = () => {
   const { id } = useParams()
-  const logement = data.find(l => l.id === id)
-  if (!logement) return <section className="accommodation"><h1>Logement introuvable</h1></section>
+  const navigate = useNavigate()
+  const [logement, setLogement] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchLogement = async () => {
+      try {
+        const data = await accommodationService.getById(id)
+        if (!data) {
+          navigate('/not-found')
+          return
+        }
+        setLogement(data)
+      } catch (error) {
+        navigate('/not-found')
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    fetchLogement()
+  }, [id, navigate])
+
+  if (isLoading) return <div>Chargement...</div>
+  if (!logement) return null
 
   return (
     <section className="accommodation">
