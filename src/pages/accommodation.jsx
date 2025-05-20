@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { accommodationService } from '../services/accommodationService'
 import { Tag } from '../components/tag'
 import { RatingStars } from '../components/rating-stars'
-import { Dropdown } from '../components/dropdown'
+import { Collapse } from '../components/collapse'
 import { Gallery } from '../components/gallery'
 import './accommodation.scss'
 
@@ -64,12 +64,12 @@ export const Accommodation = () => {
         </div>
       </div>
       <div className="accommodation__dropdowns">
-        <Dropdown title="Description">{logement.description}</Dropdown>
-        <Dropdown title="Équipements">
+        <Collapse title="Description">{logement.description}</Collapse>
+        <Collapse title="Équipements">
           <ul>
             {logement.equipments.map(e => <li key={e}>{e}</li>)}
           </ul>
-        </Dropdown>
+        </Collapse>
       </div>
     </section>
   )

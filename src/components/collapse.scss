@@ -1,4 +1,4 @@
-.dropdown {
+.collapse {
   width: 100%;
   margin-bottom: 0.5rem;
 
@@ -19,11 +19,18 @@
     outline: none;
   }
 
-  &__icon {
+  &__arrow {
     width: 24px;
     height: 24px;
-    margin-left: 1rem;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
+  }
+
+  &__arrow--desktop {
+    display: none;
+  }
+
+  &__arrow--mobile {
+    display: block;
   }
 
   &__content {
@@ -33,21 +40,33 @@
     padding: 1.2rem;
     font-size: 1rem;
     margin-top: -4px;
-    animation: dropdown-fade 0.2s;
+    animation: collapse-fade 0.2s;
   }
 
-  &--open .dropdown__icon {
+  &--open .collapse__arrow {
     transform: rotate(180deg);
   }
 }
 
 @media (min-width: 768px) {
-  .dropdown__toggle {
-    font-size: 24px;
+  .collapse {
+    width: 80%;
+
+    &__toggle {
+      font-size: 24px;
+    }
+
+    &__arrow--desktop {
+      display: block;
+    }
+
+    &__arrow--mobile {
+      display: none;
+    }
   }
 }
 
-@keyframes dropdown-fade {
+@keyframes collapse-fade {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 } 
