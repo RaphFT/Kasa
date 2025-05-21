@@ -2,9 +2,7 @@ import React from 'react'
 import { 
   BrowserRouter, 
   Routes, 
-  Route,
-  UNSAFE_NavigationContext as NavigationContext,
-  UNSAFE_RouteContext as RouteContext
+  Route
 } from 'react-router-dom'
 import { Home } from './pages/home'
 import { About } from './pages/about'
